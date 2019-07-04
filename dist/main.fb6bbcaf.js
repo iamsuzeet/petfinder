@@ -259,7 +259,7 @@ function fetAnimals(e) {
   var animal = document.querySelector('#animal').value;
   var zip = document.querySelector('#zip').value; //fetch Pets
 
-  (0, _fetchJsonp.default)("http://api.petfinder.com/pet.find?format=json&key=THbSXUX6KusmUCJDktKTGizRFacv4mDPxbUOCrrGkUO2Bu1SXa&animal=".concat(animal, "&location=").concat(zip), {
+  (0, _fetchJsonp.default)("https://cors-anywhere.herokuapp.com/http://api.petfinder.com/pet.find?format=json&key=THbSXUX6KusmUCJDktKTGizRFacv4mDPxbUOCrrGkUO2Bu1SXa&animal=".concat(animal, "&location=").concat(zip, "&callback=callback"), {
     jsonpCallbackFunction: 'callback'
   }).then(function (res) {
     return res.json();

@@ -14,7 +14,7 @@ function fetAnimals(e) {
   const zip = document.querySelector('#zip').value;
 
   //fetch Pets
-  fetchJsonp(`http://api.petfinder.com/pet.find?format=json&key=THbSXUX6KusmUCJDktKTGizRFacv4mDPxbUOCrrGkUO2Bu1SXa&animal=${animal}&location=${zip}`, {
+  fetchJsonp(`https://cors-anywhere.herokuapp.com/http://api.petfinder.com/pet.find?format=json&key=THbSXUX6KusmUCJDktKTGizRFacv4mDPxbUOCrrGkUO2Bu1SXa&animal=${animal}&location=${zip}&callback=callback`, {
     jsonpCallbackFunction: 'callback'
   })
     .then(res => res.json())
